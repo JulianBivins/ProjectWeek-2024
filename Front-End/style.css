@@ -1,0 +1,37 @@
+.header-icon {
+    display: inlinel;
+    height: 1.5rem; 
+}
+
+.header {
+        padding-bottom: 0.5rem !important;
+}
+
+.sub-header {
+    font-weight: 600 !important;
+}
+
+.feature-icon-small {
+    width: 3rem;
+    height: 3rem;
+}
+.features-icon-svg {
+    height: 3vh;
+}
+
+#aboutUs {
+    display: flex;
+    justify-content: center;
+}
+
+/* .footer-dark {
+    background-color: rgb(6, 39, 72) ;
+} */
+.footer-font {
+    color: whitesmoke !important;
+}
+
+.border-top{
+    --bs-border-color: 33, 37, 41;
+    border-top: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+}
