@@ -1,5 +1,18 @@
+body, html {
+    height: 100%; /* Makes the html and body take up the full height of the viewport */
+    margin: 0; /* Removes default margins */
+    display: flex;  /* Enables flexbox layout */
+    flex-direction: column; /* Arranges children elements in a column (top to bottom) */
+}
+
+
+.form-signin {
+    max-width: 330px;
+    padding: 1rem;
+}
+
 .header-icon {
-    display: inlinel;
+    display: inline;
     height: 1.5rem; 
 }
 
@@ -24,9 +37,6 @@
     justify-content: center;
 }
 
-/* .footer-dark {
-    background-color: rgb(6, 39, 72) ;
-} */
 .footer-font {
     color: whitesmoke !important;
 }
@@ -34,4 +44,29 @@
 .border-top{
     --bs-border-color: 33, 37, 41;
     border-top: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+}
+
+
+
+.body-login {
+    height: 5000px;
+    overflow: hidden;
+}
+
+.bg{
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.bg-image {
+    position: absolute;
+    left: -200px;
+    top: -70px;
+    max-width: 60rem;
+    z-index: -1;
 }

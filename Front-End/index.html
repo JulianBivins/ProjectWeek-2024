@@ -8,13 +8,39 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
   </head>
+
   <body>
-    <h1>insert Login funktion </h1>
+    <!-- background  -->
+    <div class="bg justify-content-left align-items-center position-fixed " style="background: #547EA8;" >
+    </div>
+    <!-- User Login -->
+    <main class="rounded-4 w-100 m-auto shadow form-signin" style="background: rgba(255, 255, 255, 0.9) ;">
+        <form>
+        <img class="mb-4 " src="./Icons/backpack4.svg" alt="" width="72" height="57">
+        <h1 class="h3 mb-3 fw-normal">Bitte Einloggen</h1>
+    
+        <div class="form-floating">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Email addresse</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Passwort</label>
+        </div>
+        <button class="btn btn-primary w-100 py-2 mt-3" type="submit">Anmelden</button>
+        <button class="btn btn-danger w-100 py-2 mt-1" type="submit">Anmelden mit Google</button>
+        <p class="mt-5 mb-3 text-body-secondary">© 2024</p>
+      </form>
+      <!-- background image -->
+      <!-- <img class="position-absolute" src="./pictures/login-background.png"   alt="background-image"> -->
+    </main>
+    
+  
     <!-- Footer -->
-    <header class="border-top text-bg-dark">
-        <div class="container ">
+    <!-- <header class="border-top text-bg-dark">
+        <div class="container">
           <footer class="py-3 my-4">
-            <ul class="nav justify-content-center   pb-3 mb-3">
+            <ul class="nav justify-content-center  pb-3 mb-3">
               <li class="nav-item "><a href="./home.html" class="nav-link px-2 text-body-secondary footer-font  ">Home</a></li>
               <li class="nav-item"><a href="./faq.html" class="nav-link px-2 text-body-secondary  footer-font">FAQs</a></li>
               <li class="nav-item"><a href="./about.html" class="nav-link px-2 text-body-secondary  footer-font">About</a></li>
@@ -22,7 +48,8 @@
             <p class="text-center text-body-secondary footer-font">© 2024 Gymnasium Riedberg</p>
           </footer>
         </div>
-      </header>
+      </header> -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
