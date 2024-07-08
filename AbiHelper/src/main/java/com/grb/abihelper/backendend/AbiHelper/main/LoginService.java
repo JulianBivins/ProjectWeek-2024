@@ -14,12 +14,10 @@ import java.util.Objects;
 public class LoginService {
 
 
-    public User authenticateUser(String email, String passwort) throws AuthenticationException {
+    public User authenticateUser(String email, String passwort)  {
         User user = findByUsername(email);
-        if (user != null && Objects.hash(passwort) == user.getPasswort()) {
-            return user;
-        }
-        throw new AuthenticationException("User does not Exist");
+        if (user != null && Objects.hash(passwort) == user.getPasswort()) return user;
+        else return null;
     }
 
 
