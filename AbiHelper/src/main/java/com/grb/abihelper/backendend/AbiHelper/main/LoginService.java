@@ -1,18 +1,23 @@
 package com.grb.abihelper.backendend.AbiHelper.main;
 
 import com.grb.abihelper.backendend.AbiHelper.model.User;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-import javax.naming.AuthenticationException;
+
 import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Service
 public class LoginService {
 
+    private static Set<User> userList = new HashSet<>();
+
+    public  LoginService() {
+        User paulo = new User( "paulobonifacio2005@gmail.com", "hehehe", "Paulo.b.d");
+        userList.add(paulo);
+        User julien = new User("Bulien@jivins.com", "hihihi", "J.B");
+        userList.add(julien);
+    }
 
     public User authenticateUser(String email, String passwort)  {
         User user = findByUsername(email);
@@ -23,7 +28,7 @@ public class LoginService {
 
 
     public static User findByUsername(String email) {
-        for (User user : User.getUserList()) {
+        for (User user : userList) {
             if (user.getEmail().equals(email)) {
                 return user;
             }

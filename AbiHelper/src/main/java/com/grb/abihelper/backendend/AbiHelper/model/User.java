@@ -25,28 +25,22 @@ public class User {
 
     private String email;
     private int passwortHash;
-    private Set<String> roles = new HashSet<>();
-    private static Set<User> userList = new HashSet<>();
-
+    private String username; //Displayname, der von der ui verwendet wird. Für backend basically useless
+    //private Set<String> roles = new HashSet<>();
+    //Roles wird defacto nicht gebraucht.
+    //Notfalls machen wir ne isAdmin funktion
     public User() {
     }
 
-    public User(  String email, String passwort, Set<String> roles) {
+    public User(  String email, String passwort, String username) {
         this.passwortHash = hashPasswort(passwort);
         this.email = email;
-        this.roles = roles;
-        if (!isExisting(this)){
-            userList.add(this);
-        }
+        this.username = username;
     }
 
 
     public void setPasswortHash(int passwortHash) {
         this.passwortHash = passwortHash;
-    }
-
-    public static Set<User> getUserList() {
-        return userList;
     }
 
     public int getPasswort() {
@@ -57,16 +51,8 @@ public class User {
         return email;
     }
 
-    public Set<String> getRoles() {
-        return roles;
-    }
-
     public int hashPasswort(String passwort) {
         return Objects.hash(passwort);
-    }
-
-    public boolean isExisting(User user){
-        return userList.contains(user);
     }
 
     //chatgpt
@@ -83,12 +69,4 @@ public class User {
         return Objects.hash(email);
     }
 
-    public static User findByUsername(String email) {
-        for (User user : userList) {
-            if (user.getEmail().equals(email)) {
-                return user;
-            }
-        }
-        return null;
-    }
 }

@@ -3,21 +3,20 @@ package com.grb.abihelper.backendend.AbiHelper.main;
 import com.grb.abihelper.backendend.AbiHelper.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.naming.AuthenticationException;
+import java.util.Objects;
+
 
 @RestController
 public class LoginController {
 
-    PasswordEncoder passwordEncoder;
+    //PasswordEncoder passwordEncoder;
 
     public LoginController() {
-        passwordEncoder = new BCryptPasswordEncoder();
+      //  passwordEncoder = new BCryptPasswordEncoder();
     }
 
     @Autowired
@@ -30,10 +29,4 @@ public class LoginController {
         else return ResponseEntity.status(401).body("Invalid email or password");
     }
 
-
-    public void registerUser(User user) {
-        String hashedPasswort = passwordEncoder.encode(String.valueOf(user.getPasswort()));
-        user.setPasswortHash(Integer.parseInt(hashedPasswort));
-        UserRepository.save(user);
-    }
 }
