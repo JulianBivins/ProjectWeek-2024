@@ -9,7 +9,7 @@ public class AIResponseCallback {
     }
     private String uuid;
     private String token;
-    private String response;
+    private String response = "";
     private AIResponseStatus status;
 
     public void setStatus(AIResponseStatus status) {
@@ -21,6 +21,12 @@ public class AIResponseCallback {
     }
 
     public String getResponse() {
+        if (response == "") {
+            if (status == AIResponseStatus.Pending) response = "Warte auf die AI, Wenn es länger als eine Minute dauert, Lad nochmal neu hoch!"; //Gerade jetzt useless. Wird später beim js debuggen helfen und
+                                        //spart uns einen Timeout in den Server einzuprogrammieren.
+
+
+        }
         return response;
     }
     public void setResponse(String response) {

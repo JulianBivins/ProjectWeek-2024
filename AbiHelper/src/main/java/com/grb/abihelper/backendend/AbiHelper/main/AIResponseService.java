@@ -3,7 +3,12 @@ package com.grb.abihelper.backendend.AbiHelper.main;
 import com.grb.abihelper.backendend.AbiHelper.model.AIResponseCallback;
 import org.springframework.stereotype.Service;
 
+
+import  java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.UUID;
+
 
 @Service
 public class AIResponseService {
@@ -18,6 +23,29 @@ public class AIResponseService {
         return callback;
     }
     public void RequestResponse(byte[] data, AIResponseCallback callback) {
+        try {
+            URL url = new URL("localhost:8151/aiInput"); //Habe ich jetzt entschieden.
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("POST");
+            conn.setRequestProperty("ID", callback.getUuid());
+            conn.setRequestProperty("Authorization", "Bearer " + callback.getToken());
+            conn.setRequestProperty("Content-Type", "application/octet-stream");
+            conn.setDoOutput(true);
+
+            OutputStream os = conn.getOutputStream();
+            os.write(data);
+            os.flush();
+
+            if (conn.getResponseCode() != HttpURLConnection.HTTP_OK) {
+                //Alles außer ok ist schlecht.
+                //Bitte bitte bitte, lass das AI Team den code 200 implementieren.
+                callback.setStatus(AIResponseCallback.AIResponseStatus.Aborted);
+            }
+        }
+        catch (Exception e) {
+            callback.setStatus(AIResponseCallback.AIResponseStatus.Aborted);
+        }
+
         //Der Code von Manvir.
         //Wenn die Anfrage irgendwie fehlschlägt müssen wir callback.status auf aborted setzen.
         //Ganz unten auf der Prio Liste
