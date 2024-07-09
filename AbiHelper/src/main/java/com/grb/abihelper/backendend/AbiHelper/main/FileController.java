@@ -34,7 +34,7 @@ public class FileController {
         headers.setContentType(MediaType.valueOf("application/txt"));
         ContentDisposition build = ContentDisposition
                 .builder("attachment")
-                .filename("dummy.txt")
+                .filename(file.generateName() + ".txt") //Noch in pdf umändern.
                 .build();
         headers.setContentDisposition(build);
         return new ResponseEntity<>(data, headers, HttpStatus.OK);

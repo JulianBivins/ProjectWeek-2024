@@ -5,22 +5,44 @@ public class PdfFile {
 
 //    private int id;
     private String name;
+    private String teil;
+    private  String option;
+    private  String fach;
+    private int jahr;
+    private boolean isLK;
+    //private String uuid; //Das was wir bisher als Dateiname benutzt haben.
+
     private byte[] bytes;
 
     public PdfFile(String name, byte[] bytes) {
-//        this.id = ++idCounter;
         this.name = name;
+        this.teil = "a";
+        this.option = "1";
+        this.fach = "Informatik";
+        this.isLK = true;
+        this.jahr = 2025;
         this.bytes = bytes;
     }
+    public  String generateName() {
+        //Generiert einen Dateinamen aus allen Metadaten.
+        return fach + ( isLK ? "LK" : "") + jahr + teil + option;
 
-//    public int getId() {
-//        return id;
-//    }
-//
-//    public void setId(int id) {
-//        this.id = id;
-//    }
+    }
+    public String getTeil() {
+        return teil;
+    }
 
+    public String getOption() {
+        return option;
+    }
+
+    public String getFach() {
+        return fach;
+    }
+
+    public boolean isLK() {
+        return isLK;
+    }
     public String getName() {
         return name;
     }
