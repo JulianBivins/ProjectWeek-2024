@@ -14,7 +14,7 @@ import java.util.Set;
 public class FileService {
 
     //private final FileRepository fileRepository;
-    MultipartFile lastUploaded;
+    public  String uploadedMessage;
      Map<String, PdfFile> files = Map.of(
             "One", new PdfFile("One", "One".getBytes()),
             "Two", new PdfFile("Two", "Two".getBytes()),

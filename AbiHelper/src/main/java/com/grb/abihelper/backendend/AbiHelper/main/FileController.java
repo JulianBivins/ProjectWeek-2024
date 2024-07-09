@@ -8,7 +8,9 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.server.ResponseStatusException;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.sound.sampled.AudioFormat;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.Collection;
 
 @RestController
@@ -16,6 +18,7 @@ public class FileController {
 
     @Autowired
     private FileService fileService;
+
 
 
 /*    @PostMapping("/pdfUpload")
@@ -46,15 +49,17 @@ public class FileController {
     }
 
     @PostMapping("/fileEchoIn")
-    public String UploadFile(@RequestParam("file") MultipartFile file, RedirectAttributes redirectAttributes) {
+    public String UploadFile(@RequestParam("file") MultipartFile  file, RedirectAttributes redirectAttributes) throws IOException {
+       fileService.uploadedMessage = new String(file.getBytes(), StandardCharsets.UTF_8);
         redirectAttributes.addFlashAttribute("message", "You uploaded your file. I will give it back to you");
-        return "redirect:/FileEchoOut";
+
+        return "redirect:./FileEchoOut";
     }
     @GetMapping("/fileEchoOut")
     public ResponseEntity<byte[]> OutputFile() throws  IOException {
-        MultipartFile file = fileService.lastUploaded;
-        if( file == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
-        byte[] data = file.getBytes();
+
+        String message = fileService.uploadedMessage;
+        byte[] data = message.getBytes();
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.valueOf("application/txt"));
         ContentDisposition build = ContentDisposition
@@ -62,7 +67,7 @@ public class FileController {
                 .filename("echo.txt")
                 .build();
         headers.setContentDisposition(build);
-        return new ResponseEntity<>(data, headers, HttpStatus.OK);
+        return new ResponseEntity<byte[]>(data, headers, HttpStatus.OK);
 
     }
 }
