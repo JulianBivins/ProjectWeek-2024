@@ -1,14 +1,10 @@
 package com.grb.abihelper.backendend.AbiHelper.main;
 
 import com.grb.abihelper.backendend.AbiHelper.model.PdfFile;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Collection;
-import java.util.Collections;
 import java.util.Map;
-import java.util.Set;
 
 @Service
 public class FileService {

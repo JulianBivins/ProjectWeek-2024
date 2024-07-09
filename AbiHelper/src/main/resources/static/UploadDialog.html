@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DIY schnell</title>
+</head>
+<body>
+    <form class="uploadForm" id="fileUploaderForm" method="post"  enctype="multipart/form-data">
+        <input type="file" id="fileInput" name="file" accept="text/plain, application/pdf">
+        <input type="submit" id="uploader" formmethod="post" >
+    </form>
+</body>
+<script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+    event.preventDefault();
+
+    var input = document.querySelector('input[type="file"]');
+    var data = new FormData();
+    data.append("file", input.files[0]);
+    fetch("/fileEchoIn", {method:"post", body: data});
+    //Funktioniert nicht wenn die file leer ist, irgendwer muss dagegen nen check einbauen
+ const form = document.querySelector("form");
+ form.addEventListener("submit", function(event) {
+   const uploadedFile = document.getElementById("fileInput").files[0];
+   console.log(uploadedFile);
+   if (uploadedFile.size < 1000*1000*1000) { //Verhindert den Upload von Gigabyte großen Datein. Bei bedarf anpassen.
+        fet
+   }
+ });
+});
+</script>
+</html>
