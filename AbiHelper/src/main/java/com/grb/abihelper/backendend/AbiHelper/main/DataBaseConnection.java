@@ -1,12 +1,10 @@
 package com.grb.abihelper.backendend.AbiHelper.main;
 
-import javax.sql.DataSource;
-import java.sql.*;
-
+/*
 public class DataBaseConnection {
 
     public static int MYSQL_DB_NOT_FOUND = 1049;
-    private void function() {
+    /*private void function() {
         var dataSource = new MysqlDataSource();
         dataSource.setServerName("localhost");
         dataSource.setPort(3306);
@@ -59,3 +57,4 @@ public class DataBaseConnection {
     }
 }
 
+*/
