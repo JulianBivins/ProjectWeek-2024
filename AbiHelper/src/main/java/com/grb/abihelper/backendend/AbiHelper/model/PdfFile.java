@@ -1,5 +1,7 @@
 package com.grb.abihelper.backendend.AbiHelper.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class PdfFile {
 //    private static int idCounter = 0;
 
@@ -11,7 +13,7 @@ public class PdfFile {
     private int jahr;
     private boolean isLK;
     //private String uuid; //Das was wir bisher als Dateiname benutzt haben.
-
+    @JsonIgnore
     private byte[] bytes;
 
 

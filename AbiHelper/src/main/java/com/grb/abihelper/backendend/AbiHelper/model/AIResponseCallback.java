@@ -1,5 +1,7 @@
 package com.grb.abihelper.backendend.AbiHelper.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class AIResponseCallback {
 
     public  enum AIResponseStatus {
@@ -8,6 +10,7 @@ public class AIResponseCallback {
         Aborted
     }
     private String uuid;
+    @JsonIgnore
     private String token;
     private String response = "";
     private AIResponseStatus status;

@@ -1,5 +1,7 @@
 package com.grb.abihelper.backendend.AbiHelper.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.*;
 
 public class User {
@@ -24,6 +26,7 @@ public class User {
 //    private Set<String> roles = new HashSet<>();
 
     private String email;
+    @JsonIgnore
     private int passwortHash;
     private String username; //Displayname, der von der ui verwendet wird. Für backend basically useless
     //private Set<String> roles = new HashSet<>();
