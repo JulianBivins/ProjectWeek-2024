@@ -10,12 +10,13 @@ import java.util.Set;
 @Service
 public class LoginService {
 
-    private static Set<User> userList = new HashSet<>();
+    private  Set<User> userList = new HashSet<>();
 
+    //Die Login Methode ist *noch* case sensitive. Wird wenn die Datenbank als Quelle benutzt wird von alleine gelöst.
     public  LoginService() {
         User paulo = new User( "paulobonifacio2005@gmail.com", "hehehe", "Paulo.b.d");
         userList.add(paulo);
-        User julien = new User("Bulien@jivins.com", "hihihi", "J.B");
+        User julien = new User("bulien@jivins.com", "hihihi", "J.B");
         userList.add(julien);
     }
 
@@ -27,7 +28,7 @@ public class LoginService {
 
 
 
-    public static User findByUsername(String email) {
+    public  User findByUsername(String email) {
         for (User user : userList) {
             if (user.getEmail().equals(email)) {
                 return user;
