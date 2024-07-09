@@ -16,8 +16,8 @@ public class LoginService {
     public  LoginService() {
         User paulo = new User( "paulobonifacio2005@gmail.com", "hehehe", "Paulo.b.d");
         userList.add(paulo);
-        User julien = new User("bulien@jivins.com", "hihihi", "J.B");
-        userList.add(julien);
+        User julian = new User("bulien@jivins.com", "hihihi", "J.B");
+        userList.add(julian);
     }
 
     public User authenticateUser(String email, String passwort)  {
@@ -25,8 +25,6 @@ public class LoginService {
         if (user != null && Objects.hash(passwort) == user.getPasswort()) return user;
         else return null;
     }
-
-
 
     public  User findByUsername(String email) {
         for (User user : userList) {
