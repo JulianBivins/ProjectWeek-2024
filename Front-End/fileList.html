@@ -66,35 +66,54 @@
       </header>
     </div>
 
-
-
-
-
-
- 
-    <div>
-      <h1 class="bd-title mb-0 mt-5 text-center">Lade hier die Abi-Aufgaben runter</h1>
-      <div class="d-flex justify-content-center mt-3 mb-3 p-3">
-        <a href="fileList.html"  class="btn btn-primary btn-sm w-50 container-sm text-center">
-          Zu den Datein
-        </a>
+    <!-- Table  -->
+    <div class="container mt-4">
+        <div class="form-outline mb-4">
+          <input type="text" class="form-control" id="tableSearch" placeholder="Search" />
+        </div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Jahr</th>
+              <th>Vorschlage</th>
+              <th>Thema</th>
+              <th>Download</th>
+              <th>Kurs</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <tr>
+              <td>2005</td>
+              <td>C2</td>
+              <td>Java</td>
+              <td><a href="">Download</a></td>
+              <td>GK</td>
+            </tr>
+            <tr>
+              <td>2005</td>
+              <td>B2</td>
+              <td>SQL</td>
+              <td><a href="">Download</a></td>
+              <td>LK</td>
+            </tr>
+            <tr>
+              <td>2008</td>
+              <td>A3</td>
+              <td>Assembly</td>
+              <td><a href="">Download</a></td>
+              <td>GK</td>
+            </tr>
+            <tr>
+              <td>2008</td>
+              <td>B1</td>
+              <td>Java</td>
+              <td><a href="">Download</a></td>
+              <td>LK</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </div>
 
-    <div>
-      <h1 class="bd-title mb-0 text-center">Lade hier deine Lösung hoch</h1>
-      <div class="max-w-4xl mx-auto h-screen pt-20 px-10 mb-5">
-        <form action="http://localhost:8080" method="post" enctype="multipart/form-data">
-          <input class="w-50 container-sm form-control mt-3" id="formFileSm" type="file" />
-        </form>  
-      </div>
-    </div>
-    <header></header>
-   
-
-
-
-    
     <!-- Place Holder zum Runterdrücken des Footers (hab keine bessere Lösung gefunden)-->
     <div class="content"></div>
     <!-- Footer -->
@@ -135,5 +154,20 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script>
+      document.getElementById('tableSearch').addEventListener('input', function () {
+        const filter = this.value.toUpperCase();
+        const rows = document.querySelectorAll('#tableBody tr');
+        
+        rows.forEach(row => {
+          const text = row.textContent || row.innerText;
+          if (text.toUpperCase().indexOf(filter) > -1) {
+            row.style.display = '';
+          } else {
+            row.style.display = 'none';
+          }
+        });
+      });
+    </script>
   </body>
 </html>
