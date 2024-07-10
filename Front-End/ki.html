@@ -68,27 +68,28 @@
 
 
 
-    <h1>insert Ki</h1>
+
 
 
 
     <div>
-      <!--bei der Lücke "     " den folder in der Datenbank verlinken wo die Lösung hochgeladen werden sollen -->
-      <h2>Lade hier deine Lösung hoch</h2>
-      <div class="max-w-4xl mx-auto h-screen pt-20 px-10">
-        <form action="http://localhost:8080/photoz" method="post" enctype="multipart/form-data">
-          <label for="file" class="d-block">Datei Upload</label>
-          <input type="file" name="file">
+
+      <h1 class="bd-title mb-0 text-center">Lade hier deine Lösung hoch</h1>
+      <div class="max-w-4xl mx-auto h-screen pt-20 px-10 mb-5">
+        <form action="http://localhost:8080" method="post" enctype="multipart/form-data">
+          <input class="w-50 container-sm form-control mt-3" id="formFileSm" type="file" />
         </form>  
       </div>
     </div>
+    <header></header>
     <div>
-      <!-- pfad muss noch hinterlegt werden(Server)-->
-      <title>Download Button</title>
-      <h1>Download Button Beispiel</h1>
-    <a href="datei.zip" download> 
-        <button>Download Datei</button>
-    </a>
+
+      <h1 class="bd-title mb-0 mt-5 text-center">Lade hier die Abi-Aufgaben runter</h1>
+      <div class="d-flex justify-content-center mt-3 p-3">
+        <a href="datei.zip" download class="btn btn-primary btn-sm w-50 container-sm">
+          Download Datei
+        </a>
+      </div>
     </div>
 
 
