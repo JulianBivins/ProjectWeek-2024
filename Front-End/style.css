@@ -118,3 +118,35 @@ html {
 .download-button:hover {
   background-color: #0056b3;
 }
+
+/* köhlchen */
+.speech-bubble {
+  position: relative;
+  background: #f0f0f0;
+  border-radius: .4em;
+  padding: 10px;
+  margin-right: 20px;
+}
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-left-color: #f0f0f0;
+  border-right: 0;
+  margin-top: -10px;
+}
+
+/* Bewertung */
+.star-rating {
+  color: gold;
+}
+
+
+.köhlchen {
+  max-height: 100px;
+}
+
