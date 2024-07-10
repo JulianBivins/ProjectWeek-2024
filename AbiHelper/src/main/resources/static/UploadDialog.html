@@ -18,16 +18,12 @@
     var input = document.querySelector('input[type="file"]');
     var data = new FormData();
     data.append("file", input.files[0]);
-    fetch("/fileEchoIn", {method:"post", body: data});
+    const resp = fetch("/fileEchoIn", {method:"post", body: data});
+    //Hier redirekt implementieren
+        //->
     //Funktioniert nicht wenn die file leer ist, irgendwer muss dagegen nen check einbauen
- const form = document.querySelector("form");
- form.addEventListener("submit", function(event) {
-   const uploadedFile = document.getElementById("fileInput").files[0];
-   console.log(uploadedFile);
-   if (uploadedFile.size < 1000*1000*1000) { //Verhindert den Upload von Gigabyte großen Datein. Bei bedarf anpassen.
-        fet
-   }
- });
-});
+
+
+    });
 </script>
 </html>
