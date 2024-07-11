@@ -1,18 +1,4 @@
 
-// Tabelle Such Funktionalität
-document.getElementById('tableSearch').addEventListener('input', function () {
-  const filter = this.value.toUpperCase();
-  const rows = document.querySelectorAll('#tableBody tr');
-  
-  rows.forEach(row => {
-    const text = row.textContent || row.innerText;
-    if (text.toUpperCase().indexOf(filter) > -1) {
-      row.style.display = '';
-    } else {
-      row.style.display = 'none';
-    }
-  });
-});
 
 
 // Tabelle Dynamik entries
@@ -56,3 +42,18 @@ function generateTable(data) {
 
 // Generate table on page load
 document.addEventListener('DOMContentLoaded', () => generateTable(jsonData));
+
+// Tabelle Such Funktionalität
+document.getElementById('tableSearch').addEventListener('input', function () {
+  const filter = this.value.toUpperCase();
+  const rows = document.querySelectorAll('#table-body tr');
+
+  rows.forEach(row => {
+    const text = row.textContent || row.innerText;
+    if (text.toUpperCase().indexOf(filter) > -1) {
+      row.style.display = '';
+    } else {
+      row.style.display = 'none';
+    }
+  });
+});
