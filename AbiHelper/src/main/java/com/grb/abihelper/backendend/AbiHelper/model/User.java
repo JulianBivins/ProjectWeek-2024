@@ -2,6 +2,7 @@ package com.grb.abihelper.backendend.AbiHelper.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import java.sql.ResultSet;
 import java.util.*;
 
 public class User {
@@ -34,7 +35,9 @@ public class User {
     //Notfalls machen wir ne isAdmin funktion
     public User() {
     }
-
+    public User (ResultSet set) {
+       // this.passwortHash = hashPasswort(set.getString(""));
+    }
     public User(  String email, String passwort, String username) {
         this.passwortHash = hashPasswort(passwort);
         this.email = email;

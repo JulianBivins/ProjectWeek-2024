@@ -11,23 +11,6 @@ import java.sql.Connection;
 public class AbiHelperApplication {
 
 	public static void main(String[] args) {
-	try {
-
-		DataSource source = createDataSource();
-		Connection connection = source.getConnection();
-
 		SpringApplication.run(AbiHelperApplication.class, args);
 	}
-	catch (Exception ex) {
-		ex.printStackTrace();
-	}
-	}
-	public  static DataSource createDataSource() {
-		HikariDataSource source = new HikariDataSource();
-		source.setJdbcUrl("jdbc:mysql://localhost:3306/Abidatenbank");
-		source.setUsername("Bootspring");
-
-		return  source;
-	}
-
 }

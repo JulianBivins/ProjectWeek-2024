@@ -10,6 +10,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.sql.SQLException;
 import java.util.Collection;
 
 @RestController
@@ -33,15 +34,15 @@ public class FileController {
 
 
     @GetMapping("/files/{id}")
-    public ResponseEntity<byte[]> downloadFiles(@PathVariable String id){
+    public ResponseEntity<byte[]> downloadFiles(@PathVariable String id) throws SQLException {
         PdfFile file = fileService.getFile(id);
         if( file == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         byte[] data = file.getBytes();
         HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.valueOf("application/txt"));
+        headers.setContentType(MediaType.valueOf("application/pdf"));
         ContentDisposition build = ContentDisposition
                 .builder("attachment")
-                .filename(file.generateName() + ".txt") //Noch in pdf umändern.
+                .filename(file.getName() + ".pdf") //Noch in pdf umändern.
                 .build();
         headers.setContentDisposition(build);
         return new ResponseEntity<>(data, headers, HttpStatus.OK);
