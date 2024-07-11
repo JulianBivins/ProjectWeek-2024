@@ -1,0 +1,152 @@
+body, 
+html {
+  height: 100%; /* Makes the html and body take up the full height of the viewport */
+  margin: 0; /* Removes default margins */
+  display: flex; /* Enables flexbox layout */
+  flex-direction: column; /* Arranges children elements in a column (top to bottom) */
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 1rem;
+}
+
+.header-icon {
+  display: inline;
+  height: 1.5rem;
+}
+
+.header {
+  padding-bottom: 0.5rem !important;
+}
+
+.sub-header {
+  font-weight: 600 !important;
+}
+
+.feature-icon-small {
+  width: 3rem;
+  height: 3rem;
+}
+.features-icon-svg {
+  height: 3vh;
+}
+
+#aboutUs {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-font {
+  color: whitesmoke !important;
+}
+
+.border-top {
+  --bs-border-color: 33, 37, 41;
+  border-top: var(--bs-border-width) var(--bs-border-style)
+    var(--bs-border-color) !important;
+}
+
+.body-login {
+  height: 5000px;
+  overflow: hidden;
+}
+
+
+.bg {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.centered-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-google{
+  background-color: white;
+  color: black;
+}
+.btn-google img {
+  height: 20px; /* Größe des Logos anpassen */
+  margin-right: 10px; /* Platz zwischen Logo und Text */
+
+}
+
+
+.bg-image {
+  position: absolute;
+  left: -200px;
+  top: -70px;
+  max-width: 60rem;
+  z-index: -1;
+}
+.custom-link {
+  color: inherit; /* Keep the current color or set another default color */
+  text-decoration: none; /* Optional: remove the underline */
+}
+
+/* Link style on hover */
+.custom-link:hover {
+  color: rgb(0, 153, 255); /* Change color to blue on hover */
+  text-decoration: underline;
+}
+
+.content {
+  flex: 1;
+}
+
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.download-button:hover {
+  background-color: #0056b3;
+}
+
+/* köhlchen */
+.speech-bubble {
+  position: relative;
+  background: #f0f0f0;
+  border-radius: .4em;
+  padding: 10px;
+  margin-right: 20px;
+}
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-left-color: #f0f0f0;
+  border-right: 0;
+  margin-top: -10px;
+}
+
+/* Bewertung */
+.star-rating {
+  color: gold;
+}
+
+
+.köhlchen {
+  max-height: 100px;
+}
+

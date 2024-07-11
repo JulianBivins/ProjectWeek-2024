@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel ="shortcut icon" type="x-icon" href="./pictures/Gymnasium-Riedberg-logo-removebg-preview.png">
+    <title>About Demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="container-fluid">
+      <header
+        class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
+      >
+        <a
+          href="/"
+          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+        >
+          <img
+            class="header-icon ml-1 mt-1"
+            src="./pictures/Gymnasium-Riedberg-logo-removebg-preview.png"
+            alt="backpack"
+            style="height:50px"
+          />
+          <span class="fs-3 fw-medium mt-2 ms-2">ABI-Helper</span>
+        </a>
+        <div class="container-sm"></div>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a href="./home.html" class="nav-link sub-header mt-1" aria-current="page"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="./faq.html" class="nav-link sub-header mt-1">FAQs</a>
+          </li>
+          <li class="nav-item">
+            <a href="./about.html" class="nav-link sub-header me-4 mt-1 active">About</a>
+          </li>
+          <div class="flex-shrink-0 dropdown ml-1 mt-1">
+            <a
+              class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="./Icons/person-circle.svg"
+                alt="mdo"
+                width="32"
+                height="32"
+                class="rounded-circle mt-1"
+              />
+            </a>
+            <ul class="dropdown-menu text-small shadow">
+              <li><a class="dropdown-item" href="./index.html">Sign out</a></li>
+            </ul>
+          </div>
+        </ul>
+      </header>
+    </div>
+
+
+    <!-- Intro -->
+    <div class="px-4 pt-5 my-5 text-center border-bottom">
+      <h1 class="display-4 fw-bold text-body-emphasis">Learn With Joy</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">
+          Willkommen auf unserer Website. Wir als Team haben es uns zur Aufgabe gemacht
+          das Lernen für das Abitur zu revolutionieren. Als Schüler
+          glauben wir, dass das Lernen nicht stressig oder kompliziert sein muss,
+          und sind von daher sehr stark daran interessiert, den Prozess so
+          effizient und angenehm wie möglich zu gestalten. Mit unserem durch
+          ChatnGPT-4 untermaurten Programm und der Abi Datenbank bieten wir
+          persönliche und zudem optimierte Lernpläne und Nachhilfemöglichkeiten an, die perfekt auf deine
+          Bedürfnisse abgestimmt sind.
+        </p>
+        <!-- <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+            <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Get a Quote</button>
+            <button type="button" class="btn btn-outline-secondary btn-lg px-4">Contact Us</button>
+          </div> -->
+      </div>
+      <div class="overflow-hidden" style="max-height: 50vh">
+        <div class="container px-5">
+          <img
+            src="./pictures/smiling-man.jpg"
+            class="img-fluid border rounded-3 shadow-lg mb-4"
+            alt="Example image"
+            width="700"
+            height="500"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Bisschen Über uns -->
+    <div class="container px-4 py-5 rounded-5 shadow mb-5" id="icon-grid">
+      <h2 class="pb-2 border-bottom">Bisschen Über Uns</h2>
+
+      <div
+        class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5"
+      >
+        <div class="col d-flex align-items-start mb-5">
+          <svg
+            class="bi text-body-secondary flex-shrink-0 me-3"
+            width="1.75em"
+            height="1.75em"
+          >
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+          <div class="">
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Schüler</h3>
+            <p>Als Schüler setzen wir uns mit großer Motivation für unser Projekt ein,
+               um innovative Lernmethoden zu entwickeln.</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg
+            class="bi text-body-secondary flex-shrink-0 me-3"
+            width="1.75em"
+            height="1.75em"
+          >
+            <use xlink:href="#cpu-fill"></use>
+          </svg>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Informatik</h3>
+            <p>Informatik ist der Kern unseres Projekts.Wir nutzeb moderne Technologien wie AI,
+               um das Lernen zu verbessern.</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg
+            class="bi text-body-secondary flex-shrink-0 me-3"
+            width="1.75em"
+            height="1.75em"
+          >
+            <use xlink:href="#calendar3"></use>
+          </svg>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Team</h3>
+            <p>Unser Team arbeitet eng zusammen um sicherzustellen, 
+              dass unser Projekts erfolgreich ist.</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg
+            class="bi text-body-secondary flex-shrink-0 me-3"
+            width="1.75em"
+            height="1.75em"
+          >
+            <use xlink:href="#home"></use>
+          </svg>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Lehrer</h3>
+            <p>Unsere Lehrer unterstützen uns mit wertvollem Feedback und 
+              begleiten uns auf dem Weg zu unserem Ziel.</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg
+            class="bi text-body-secondary flex-shrink-0 me-3"
+            width="1.75em"
+            height="1.75em"
+          >
+            <use xlink:href="#speedometer2"></use>
+          </svg>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Anstreben</h3>
+            <p>Wir streben danach die besten Lösungen 
+              für die Herausforderungen im modernen Bildungswesen zu finden.</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg
+            class="bi text-body-secondary flex-shrink-0 me-3"
+            width="1.75em"
+            height="1.75em"
+          >
+            <use xlink:href="#toggles2"></use>
+          </svg>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Helfen</h3>
+            <p>Unser Ziel ist es anderen Schülern zu helfen
+               ihre Lernziele effizienter und erfolgreicher zu erreichen.</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg
+            class="bi text-body-secondary flex-shrink-0 me-3"
+            width="1.75em"
+            height="1.75em"
+          >
+            <use xlink:href="#geo-fill"></use>
+          </svg>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Gymnasium Riedberg</h3>
+            <p>Am Gymnasium Riedberg haben wir die Möglichkeit, 
+              unsere Ideen zu verwirklichen und innovative Projekte umzusetzen.</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg
+            class="bi text-body-secondary flex-shrink-0 me-3"
+            width="1.75em"
+            height="1.75em"
+          >
+            <use xlink:href="#tools"></use>
+          </svg>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Lernen</h3>
+            <p>Unser Projekt zielt darauf ab, das Lernen durch moderne 
+              Technologien interessanter und effektiver zu gestalten.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- carousel -->
+    <div id="aboutUs" class="container "><h2>About Us</h2></div>
+    <div id="carouselExampleCaptions" class="carousel slide container mb-5">
+      <div class="carousel-indicators ">
+        <!-- slim sliders buttom -->
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <!-- picture -->
+      <div class="carousel-inner rounded-5">
+        <div class="carousel-item active">
+          <img
+            src="./pictures/front-end-placeholder.jpeg"
+            class="d-block w-100"
+            alt="Front-End Team"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Front-End Team</h5>
+            <p>Das Exzellente Front-End Team</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./pictures/back-end-placeholder.jpeg"
+            class="d-block w-100"
+            alt="Back-End Team"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Back-End Team</h5>
+            <p>Unser Exzellenten Servside Developer</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./pictures/database-placeholder.jpeg"
+            class="d-block w-100"
+            alt="Database Team"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Database Team</h5>
+            <p>Unsere Exzellenten Database Manager</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- Place Holder zum Runterdrücken des Footers (hab keine bessere Lösung gefunden)-->
+    <div class="content"></div>
+    <!-- Footer -->
+    <header class="border-top text-bg-dark">
+      <div class="container">
+        <footer class="py-3 my-4">
+          <ul class="nav justify-content-center pb-3 mb-3">
+            <li class="nav-item">
+              <a
+                href="./home.html"
+                class="nav-link px-2 text-body-secondary footer-font"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="./faq.html"
+                class="nav-link px-2 text-body-secondary footer-font"
+                >FAQs</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="./about.html"
+                class="nav-link px-2 text-body-secondary footer-font"
+                >About</a
+              >
+            </li>
+          </ul>
+          <p class="text-center text-body-secondary footer-font">
+            © 2024 Gymnasium Riedberg
+          </p>
+        </footer>
+      </div>
+    </header>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  
+    
+  
+  </body>
+  </html>
+
+
